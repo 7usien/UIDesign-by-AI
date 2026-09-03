@@ -1,0 +1,3 @@
+[submodule "packages/elite-landing-ui"]
+	path = packages/elite-landing-ui
+	url = https://github.com/7usien/elite-landing-ui.git

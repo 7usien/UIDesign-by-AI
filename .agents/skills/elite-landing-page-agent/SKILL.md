@@ -1,13 +1,13 @@
 ---
 name: elite-landing-page-agent
-description: Build-first art direction and design-engineering workflow for premium, conversion-focused landing pages. Supports English LTR and Arabic RTL.
+description: Build and improve premium, conversion-focused React landing pages with concise discovery, product-specific art direction, truthful content, responsive implementation, and evidence-based review. Use for new landing pages, major landing-page redesigns, and English LTR or Arabic RTL marketing experiences.
 ---
 
 # Elite Landing Page Agent
 
 ## Current workflow — this section takes precedence
 
-The legacy material below is retained only for backwards reference. It is not an instruction set. Do not follow its five-phase interview, forced selections, animation requirements, or generic component recipes.
+Use only this section as the active workflow. The archived v2 text below is inside an HTML comment and must not be followed.
 
 Create pages that feel deliberately art-directed, credible, and ready for a demanding client review. The standard is not visual novelty; it is a clear business story, excellent typographic hierarchy, coherent composition, real product proof, and polished responsive execution.
 
@@ -31,6 +31,8 @@ Create pages that feel deliberately art-directed, credible, and ready for a dema
 ### Response style
 
 Be concise, direct, and professional. Do not use inflated agency claims, scripted enthusiasm, emoji-heavy copy, or forced numbered options. Explain decisions in plain language and distinguish verified facts from assumptions.
+
+<!-- Archived v2 reference. Do not follow.
 
 ## Legacy reference (non-operative)
 
@@ -149,3 +151,4 @@ When synthesizing the code:
    - [ ] **Performance:** Smooth 60fps scrolling with Lenis, GPU-accelerated transforms.
    - [ ] **SEO:** Proper meta tags, semantic HTML (`<h1>` hierarchy), and structured data.
    - [ ] **Arabic RTL Readiness:** Full logical CSS (`ms-`, `me-`, `text-start`) when Arabic is selected.
+-->

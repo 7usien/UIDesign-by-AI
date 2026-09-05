@@ -9,15 +9,22 @@ Implement `elite-landing-ui` v3 as an agent-first design-quality harness for Rea
 
 This document defines the implementation order, concrete tasks, public interfaces, dependencies, verification, and phase exit gates. When documents conflict, preserve the product constraints in the v3 plan and use the orchestration specification for agent roles, state, and permissions.
 
+## Implementation Status — 2026-09-05
+
+- Phase 0–3: complete — cleanup, contracts, orchestration, capture, audit, critic isolation, bounded revision, sequential human review, verification, and reporting are implemented.
+- Phase 4: complete — unit/integration gates, CI, protected release workflow, tarball inspection, and clean-install smoke testing are implemented and passing.
+- Phase 5: implementation complete — five diverse benchmark kits and their human oracle criteria are included. Their visual decisions intentionally remain `PENDING_HUMAN_REVIEW` until real pages are rendered and reviewed.
+- Package commit `fc5421f` is pushed to `elite-landing-ui` on `main`. Stable npm publication remains gated by five current human approvals and an explicitly authorized release.
+
 ## Fixed Technical Decisions
 
 - Treat `packages/elite-landing-ui` as the primary package repository and implementation source of truth.
 - Keep the outer `.agents/skills/elite-landing-page-agent` copy synchronized only for immediate workspace use.
 - Implement the v3 CLI in TypeScript and bundle it to a Node-compatible executable with `tsup`.
-- Require Node.js 20 or newer for v3; the current development environment is Node.js 24.
+- Require Node.js 22.19 or newer for v3; the current development environment is Node.js 24.
 - Keep both public binary names: `elite-landing-ui` and `elite-ui`.
 - Use `commander` for command parsing, JSON Schema files as contract sources, `ajv` plus `ajv-formats` for runtime validation, and `json-schema-to-ts` for compile-time types.
-- Use `playwright-core` with an explicitly discovered or installed Chromium browser; never download a browser silently during package installation.
+- Use Playwright with an explicitly discovered or installed Chromium browser; never download a browser silently during package installation.
 - Inject `axe-core` into captured pages for accessibility checks.
 - Use Lighthouse with an explicitly launched Chromium instance for benchmark performance, accessibility, best-practices, and SEO scores.
 - Use Vitest for unit and integration tests, `oxlint` for linting, and TypeScript strict mode for typechecking.
@@ -26,19 +33,19 @@ This document defines the implementation order, concrete tasks, public interface
 - Store generated run evidence under `.elite/runs/<run-id>/` in the consumer project and ignore it by default except for explicitly approved reports.
 - Publish `3.0.0-beta.1` only after automated package gates pass. Publish `3.0.0` stable only after all five benchmarks and human design gates pass.
 
-## Phase 0 — Reconcile the Current Partial Work
+## Phase 0 — Reconcile the Current Partial Work (Completed)
 
-Current known state:
+Historical baseline:
 
 - The packaged `SKILL.md` has already been reduced from the conflicting v2 workflow to a concise 26-line workflow.
-- `skills/elite-landing-page-agent/references/design-principles.md` has been added locally.
+- The original monolithic `design-principles.md` was replaced by focused strategy, direction, conversion, responsive/RTL, reference-intelligence, and visual-jury references.
 - The obsolete package `src/index.css` has been deleted locally.
-- The CLI, package metadata, package lock, duplicated `.agents` content, UI vault, legacy knowledge base, and outer workspace skill remain on the v2 structure.
-- The two planning documents and this execution plan are untracked in the outer repository.
+- The CLI, package metadata, package lock, duplicated `.agents` content, UI vault, legacy knowledge base, and outer workspace skill were still on the v2 structure.
+- The two planning documents and this execution plan were initially untracked in the outer repository.
 
 Tasks:
 
-- Review the partial package diff and preserve the concise skill, design-principles reference, and CSS deletion if they match the approved plans.
+- Review the package diff and preserve the concise skill and focused references if they match the approved plans.
 - Confirm there are no unrelated changes inside the nested package or outer repository before each phase.
 - Record the baseline commands and tarball contents before further cleanup.
 - Work in the current checkout; do not create a worktree unless separately approved.
@@ -54,7 +61,7 @@ Exit gate:
 ### Package cleanup
 
 - Keep one canonical runtime skill at `skills/elite-landing-page-agent/SKILL.md`.
-- Keep `references/design-principles.md` as the only Phase 1 runtime reference.
+- Keep only the focused v3 references selected by the runtime skill.
 - Delete the package-local `.agents` duplicate, `skills/ui-design-vault`, legacy knowledge-base document, and obsolete aesthetic CSS.
 - Remove embedded `ELITE_AGENT_SKILL`, `DESIGN_VAULT_SKILL`, and `CSS_TOKENS` constants from the CLI.
 - Make `init` fail with exit code `2` and an actionable package-integrity message if the canonical bundled skill is missing.
@@ -67,7 +74,7 @@ Exit gate:
 
 ### Workspace synchronization
 
-- Replace the outer workspace skill with the canonical packaged skill and its design-principles reference.
+- Replace the outer workspace skill with the complete canonical packaged skill.
 - Remove the outer `ui-design-vault` skill and obsolete portable/knowledge-base documents after confirming they are not referenced by unrelated application code.
 - Keep the v3 plan, orchestration specification, and execution plan in `docs/`.
 

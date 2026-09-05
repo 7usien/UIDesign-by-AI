@@ -1,0 +1,6 @@
+interface:
+  display_name: "Elite Landing Page Director"
+  short_description: "Strategy, art direction, build, and visual jury"
+  default_prompt: "Use $elite-landing-page-agent to design or transform this landing page from the real brief and references, then inspect and revise the rendered result."
+policy:
+  allow_implicit_invocation: true

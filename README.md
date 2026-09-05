@@ -1,32 +1,13 @@
-# React + TypeScript + Vite
+# Elite Landing UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This repository develops a universal AI-assisted creative director and design-engineering workflow for exceptional landing pages.
 
-Currently, two official plugins are available:
+The product source is [`packages/elite-landing-ui`](packages/elite-landing-ui). It is not tied to a specific company, industry, or fixed visual style. Every landing page must derive its strategy, art direction, composition, proof, responsive behavior, and RTL/LTR treatment from the active project brief and supplied references.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Product specifications:
 
-## React Compiler
+- [`docs/elite-landing-ui-v3-plan.md`](docs/elite-landing-ui-v3-plan.md)
+- [`docs/elite-landing-ui-v3-orchestration.md`](docs/elite-landing-ui-v3-orchestration.md)
+- [`docs/elite-landing-ui-v3-implementation-plan.md`](docs/elite-landing-ui-v3-implementation-plan.md)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+The root page is only a neutral development workspace. Benchmark landing pages must remain isolated evaluation fixtures and must never become production templates.

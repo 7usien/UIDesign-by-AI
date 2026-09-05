@@ -18,7 +18,7 @@ When prompted:
 - Set up and deploy? **Y**
 - Which scope? **Select your account**
 - Link to existing project? **N** (or **Y** if updating)
-- Project name? **egydes-security**
+- Project name? **elite-landing-ui-workspace**
 - In which directory is your code located? `./`
 - Auto-detected Project Settings: **Vite**
 - Want to modify these settings? **N**

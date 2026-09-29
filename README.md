@@ -4,10 +4,9 @@ This repository develops a universal AI-assisted creative director and design-en
 
 The product source is [`packages/elite-landing-ui`](packages/elite-landing-ui). It is not tied to a specific company, industry, or fixed visual style. Every landing page must derive its strategy, art direction, composition, proof, responsive behavior, and RTL/LTR treatment from the active project brief and supplied references.
 
-Product specifications:
-
-- [`docs/elite-landing-ui-v3-plan.md`](docs/elite-landing-ui-v3-plan.md)
-- [`docs/elite-landing-ui-v3-orchestration.md`](docs/elite-landing-ui-v3-orchestration.md)
-- [`docs/elite-landing-ui-v3-implementation-plan.md`](docs/elite-landing-ui-v3-implementation-plan.md)
+The canonical product instructions, workflow, and release boundaries live in
+[`packages/elite-landing-ui/README.md`](packages/elite-landing-ui/README.md).
+The current workflow is v5 and requires a screenshot-backed first-screen
+checkpoint before full-page implementation.
 
 The root page is only a neutral development workspace. Benchmark landing pages must remain isolated evaluation fixtures and must never become production templates.

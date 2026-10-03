@@ -6,7 +6,11 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-
+/benchmark-demos/
+/screenshots/
+/.elite/
+/docs/superpowers/
+/elite.config.json
 node_modules
 dist
 dist-ssr
